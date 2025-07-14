@@ -108,6 +108,9 @@
       STOP_CHARGE_THRESH_BAT0 = 80;
   };
 
+  # Set up polkit agent
+  security.polkit.enable = true;
+
   # Environment Variables
   environment.variables = {
       QT_QPA_PLATFORMTHEME="qt6ct";
@@ -174,11 +177,10 @@
      lazygit
      lazydocker
      docker
-     lxde.lxsession
      nodejs_24
      kdePackages.okular
      onlyoffice-desktopeditors
-     gparted
+     kdePackages.partitionmanager
      qalculate-qt
      qbittorrent
      spotify
@@ -186,6 +188,9 @@
      xdg-desktop-portal-wlr
      zip
      unzip
+     python314
+     gcc
+     lxqt.lxqt-policykit
   ];
 
   virtualisation.docker.enable = true;
