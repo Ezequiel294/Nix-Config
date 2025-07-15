@@ -17,15 +17,23 @@
       systemd-boot.enable = false;
       efi.canTouchEfiVariables = true;
       grub = {
-          enable = true;
-	  devices = [ "nodev" ];
-	  efiSupport = true;
-	  useOSProber = true;
-	  gfxmodeEfi = "1920x1440";
-	  splashImage = null;
-          theme = "${pkgs.pkgs.kdePackages.breeze-grub}/grub/themes/breeze";
+        enable = true;
+	devices = [ "nodev" ];
+	efiSupport = true;
+	useOSProber = true;
+	gfxmodeEfi = "1920x1440";
+	splashImage = null;
+	configurationLimit = 5;
+        theme = "${pkgs.pkgs.kdePackages.breeze-grub}/grub/themes/breeze";
       };
     };
+  };
+
+  # TPM2 configuration
+  security.tpm2 = {
+    enable = true;
+    pkcs11.enable = true;  # expose /run/current-system/sw/lib/libtpm2_pkcs11.so
+    tctiEnvironment.enable = true;  # TPM2TOOLS_TCTI and TPM2_PKCS11_TCTI env variables
   };
 
   # Use latest kernel.
@@ -69,7 +77,7 @@
   users.users.ezequiel = {
     isNormalUser = true;
     description = "Ezequiel Buck";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "tss" ];
     packages = with pkgs; [];
   };
 
@@ -123,6 +131,22 @@
       GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300";
   };
 
+  # Set GTK theme
+      environment.etc."gtk-3.0/settings.ini".text = ''
+        [Settings]
+	gtk-theme-name = Breeze-Dark
+	gtk-icon-theme-name = Breeze-Dark
+	gtk-cursor-theme-name = Breeze
+	gtk-font-name = Cantarell 10
+      '';
+      environment.etc."gtk-4.0/settings.ini".text = ''
+        [Settings]
+	gtk-theme-name = Breeze-Dark
+	gtk-icon-theme-name = Breeze-Dark
+	gtk-cursor-theme-name = Breeze
+	gtk-font-name = Cantarell 10
+      '';
+
   fonts.packages = with pkgs; [
      cantarell-fonts
      nerd-fonts.jetbrains-mono
@@ -162,7 +186,7 @@
      gtk3
      kdePackages.breeze
      libsForQt5.breeze-qt5
-     kdePackages.breeze-gtk
+     libsForQt5.breeze-gtk
      pwvucontrol
      kdePackages.breeze-icons
      autotiling
@@ -191,6 +215,7 @@
      python314
      gcc
      lxqt.lxqt-policykit
+     networkmanagerapplet
   ];
 
   virtualisation.docker.enable = true;
