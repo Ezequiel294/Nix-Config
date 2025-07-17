@@ -40,7 +40,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "p14s"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -131,6 +130,9 @@
       GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300";
   };
 
+  # Docker Virtualization
+  virtualisation.docker.enable = true;
+
   # Set GTK theme
       environment.etc."gtk-3.0/settings.ini".text = ''
         [Settings]
@@ -218,7 +220,6 @@
      networkmanagerapplet
   ];
 
-  virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -227,11 +228,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -246,5 +242,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
+
