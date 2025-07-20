@@ -120,7 +120,10 @@
 
   # Environment Variables
   environment.variables = {
+      NIXOS_OZONE_WL="1";
+      QT_QPA_PLATFORM="wayland";
       QT_QPA_PLATFORMTHEME="qt6ct";
+      GDK_BACKEND="wayland";
       GTK_THEME="Breeze-Dark";
       BROWSER="firefox-developer-edition";
       EDITOR="nvim";
@@ -178,7 +181,6 @@
      protonvpn-gui
      keepassxc
      yazi
-     kdePackages.dolphin
      lxappearance-gtk2
      kdePackages.qt6ct
      libsForQt5.qt5ct
@@ -210,7 +212,7 @@
      qalculate-qt
      qbittorrent
      spotify
-     vscode-with-extensions
+     vscode-fhs
      xdg-desktop-portal-wlr
      zip
      unzip
