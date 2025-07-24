@@ -152,6 +152,13 @@
 	gtk-font-name = Cantarell 10
       '';
 
+      xdg.mime.defaultApplications = {
+  	"text/html" = "firefox-devedition.desktop";
+        "x-scheme-handler/http" = "firefox-devedition.desktop";
+ 	"x-scheme-handler/https" = "firefox-devedition.desktop";
+      };
+
+
   fonts.packages = with pkgs; [
      cantarell-fonts
      nerd-fonts.jetbrains-mono
@@ -176,7 +183,6 @@
      tmux
      fish
      firefox-devedition
-     dropbox
      proton-pass
      protonvpn-gui
      keepassxc
@@ -195,7 +201,6 @@
      kdePackages.breeze-icons
      autotiling
      btop
-     chromium
      fastfetch
      eza
      bat
@@ -220,6 +225,8 @@
      gcc
      lxqt.lxqt-policykit
      networkmanagerapplet
+     chromium
+     dropbox
   ];
 
 
