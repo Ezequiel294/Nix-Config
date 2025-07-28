@@ -124,7 +124,7 @@
   environment.variables = {
       NIXOS_OZONE_WL="1";
       QT_QPA_PLATFORM="wayland";
-      QT_QPA_PLATFORMTHEME="qt6ct";
+      QT_QPA_PLATFORMTHEME="qt5ct";
       GDK_BACKEND="wayland";
       GTK_THEME="Breeze-Dark";
       BROWSER="firefox-developer-edition";
