@@ -54,6 +54,8 @@
       yazi
       dropbox
       insync
+      kdePackages.dolphin
+      xfce.thunar
 
       # ───── Utilities ─────
       kdePackages.okular
