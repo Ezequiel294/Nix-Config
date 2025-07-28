@@ -10,6 +10,6 @@
 
       polkit = {
           enable = true;
-      }
+      };
     };
 }
