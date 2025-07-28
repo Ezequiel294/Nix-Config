@@ -90,6 +90,7 @@
   programs.sway = {
       enable = true;
       xwayland.enable = true;
+      wrapperFeatures.gtk = true;
   };
 
   # Sound
@@ -136,28 +137,16 @@
   # Docker Virtualization
   virtualisation.docker.enable = true;
 
-  # Set GTK theme
-      environment.etc."gtk-3.0/settings.ini".text = ''
-        [Settings]
-	gtk-theme-name = Breeze-Dark
-	gtk-icon-theme-name = Breeze-Dark
-	gtk-cursor-theme-name = Breeze
-	gtk-font-name = Cantarell 10
-      '';
-      environment.etc."gtk-4.0/settings.ini".text = ''
-        [Settings]
-	gtk-theme-name = Breeze-Dark
-	gtk-icon-theme-name = Breeze-Dark
-	gtk-cursor-theme-name = Breeze
-	gtk-font-name = Cantarell 10
-      '';
+  # Applications Theme
+  qt.enable = true;
+  qt.platformTheme = "qt5ct";
 
-      xdg.mime.defaultApplications = {
-  	"text/html" = "firefox-devedition.desktop";
-        "x-scheme-handler/http" = "firefox-devedition.desktop";
- 	"x-scheme-handler/https" = "firefox-devedition.desktop";
-      };
-
+  # Set default browser
+  xdg.mime.defaultApplications = {
+    "text/html" = "firefox-devedition.desktop";
+    "x-scheme-handler/http" = "firefox-devedition.desktop";
+    "x-scheme-handler/https" = "firefox-devedition.desktop";
+  };
 
   fonts.packages = with pkgs; [
      cantarell-fonts
@@ -165,7 +154,7 @@
   ];
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # $ nix search packagename
   environment.systemPackages = with pkgs; [
      neovim 
      wget
@@ -228,7 +217,6 @@
      chromium
      dropbox
   ];
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
