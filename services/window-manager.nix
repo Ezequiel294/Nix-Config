@@ -9,6 +9,7 @@
 
     # Applications Theme
     qt.enable = true;
+    qt.style = "adwaita-dark";
     qt.platformTheme = "qt5ct";
 
     # Set default browser
