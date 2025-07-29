@@ -14,8 +14,6 @@
       zip
       unzip
       networkmanagerapplet
-      brightnessctl
-      wl-clipboard
 
       # ───── Shell & Terminal ─────
       fish

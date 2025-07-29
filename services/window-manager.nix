@@ -14,6 +14,8 @@
                 xdg-desktop-portal-gtk
                 xdg-desktop-portal
                 brightnessctl
+                wl-clipboard
+                pwvucontrol
                 autotiling
                 swayidle
                 swaylock
