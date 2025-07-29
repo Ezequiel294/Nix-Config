@@ -55,7 +55,6 @@
       # ───── Utilities ─────
       ghostty
       kdePackages.okular
-      onlyoffice-desktopeditors
       kdePackages.partitionmanager
       qalculate-qt
       libreoffice
