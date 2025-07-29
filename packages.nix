@@ -55,31 +55,27 @@
       insync
 
       # ───── Utilities ─────
+      ghostty
       kdePackages.okular
       onlyoffice-desktopeditors
       kdePackages.partitionmanager
       qalculate-qt
+      libreoffice
 
       # ───── Media ─────
       spotify
       qbittorrent
 
-      # ───── Remote Access ─────
-      freerdp
-
-      # ───── Wayland UI / WM / Portal ─────
-      ghostty
-      waybar
-      swaylock
-      swayidle
-      wofi
-      grim
-      slurp
-      autotiling
-      kanshi
-      xdg-desktop-portal
-      xdg-desktop-portal-wlr
-      xdg-desktop-portal-gtk
-      kdePackages.xdg-desktop-portal-kde
+      # ───── Appearance / Themes ─────
+      gtk3
+      gtk4
+      kdePackages.qt6ct
+      libsForQt5.qt5ct
+      lxappearance-gtk2
+      kdePackages.breeze
+      libsForQt5.breeze-qt5
+      libsForQt5.breeze-gtk
+      adwaita-icon-theme
+      kdePackages.breeze-icons
    ];
 }

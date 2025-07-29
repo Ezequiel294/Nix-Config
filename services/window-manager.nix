@@ -1,15 +1,31 @@
 { config, pkgs, ... }:
 
 {
-    programs.sway = {
-        enable = true;
-        xwayland.enable = true;
-        wrapperFeatures.gtk = true;
+    programs = {
+        waybar.enable = true;
+        sway = {
+            enable = true;
+            xwayland.enable = true;
+            wrapperFeatures.gtk = true;
+            wrapperFeatures.base = true;
+            extraPackages = with pkgs; [
+                kdePackages.xdg-desktop-portal-kde
+                xdg-desktop-portal-wlr
+                xdg-desktop-portal-gtk
+                xdg-desktop-portal
+                brightnessctl
+                autotiling
+                swayidle
+                swaylock
+                kanshi
+                slurp
+                wofi
+                grim
+            ];
+        };
     };
 
-    services.desktopManager.plasma6.enable = true;
-
-    # Set default browser
+    # Default browser
     xdg.mime.defaultApplications = {
         "text/html" = "firefox-devedition.desktop";
         "x-scheme-handler/http" = "firefox-devedition.desktop";

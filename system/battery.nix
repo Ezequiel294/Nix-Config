@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    services.power-profiles-daemon.enable = false;
     services.tlp.enable = true;
     services.tlp.settings = {
         PLATFORM_PROFILE_ON_AC = "performance";
