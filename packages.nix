@@ -13,7 +13,6 @@
       wget
       zip
       unzip
-      lxqt.lxqt-policykit
       networkmanagerapplet
       brightnessctl
       wl-clipboard
@@ -82,16 +81,5 @@
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
       kdePackages.xdg-desktop-portal-kde
-
-      # ───── Appearance / Themes ─────
-      kdePackages.qt6ct
-      libsForQt5.qt5ct
-      lxappearance-gtk2
-      gtk3
-      gtk4
-      adwaita-qt
-      adwaita-qt6
-      adwaita-icon-theme
-      apple-cursor
    ];
 }
