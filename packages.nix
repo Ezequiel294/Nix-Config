@@ -88,9 +88,8 @@
       libsForQt5.qt5ct
       gtk3
       gtk4
-      kdePackages.breeze
-      kdePackages.breeze-icons
-      libsForQt5.breeze-qt5
-      libsForQt5.breeze-gtk
+      adwaita-qt
+      adwaita-qt6
+      adwaita-icon-theme
    ];
 }
