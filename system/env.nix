@@ -6,7 +6,7 @@
         QT_QPA_PLATFORM="wayland";
         QT_QPA_PLATFORMTHEME="qt5ct";
         GDK_BACKEND="wayland";
-        GTK_THEME="Breeze-Dark";
+        GTK_THEME="adwaita-dark";
         BROWSER="firefox-developer-edition";
         EDITOR="nvim";
         VISUAL="code";

@@ -91,5 +91,6 @@
       adwaita-qt
       adwaita-qt6
       adwaita-icon-theme
+      apple-cursor
    ];
 }
