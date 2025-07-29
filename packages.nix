@@ -86,6 +86,7 @@
       # ───── Appearance / Themes ─────
       kdePackages.qt6ct
       libsForQt5.qt5ct
+      lxappearance-gtk2
       gtk3
       gtk4
       adwaita-qt
