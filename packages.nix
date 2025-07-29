@@ -51,6 +51,7 @@
       yazi
       dropbox
       insync
+      xfce.thunar
 
       # ───── Utilities ─────
       ghostty
