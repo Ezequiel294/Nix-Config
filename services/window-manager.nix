@@ -13,6 +13,7 @@
                 xdg-desktop-portal-wlr
                 xdg-desktop-portal-gtk
                 xdg-desktop-portal
+                lxqt.lxqt-policykit
                 brightnessctl
                 wl-clipboard
                 pwvucontrol

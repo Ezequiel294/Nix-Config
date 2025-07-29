@@ -29,7 +29,7 @@
       neovim
       vscode-fhs
 
-      # ───── Git & Dev Tools ─────
+      # ───── Dev Tools ─────
       git
       git-credential-manager
       nodejs_24
