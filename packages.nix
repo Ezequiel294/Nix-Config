@@ -68,11 +68,11 @@
       gtk4
       kdePackages.qt6ct
       libsForQt5.qt5ct
-      lxappearance-gtk2
+      themechanger
+      adw-gtk3
+      adwaita-icon-theme
       kdePackages.breeze
       libsForQt5.breeze-qt5
-      libsForQt5.breeze-gtk
-      adwaita-icon-theme
       kdePackages.breeze-icons
    ];
 }

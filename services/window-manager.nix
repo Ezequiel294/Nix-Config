@@ -28,6 +28,9 @@
         };
     };
 
+    # Theme
+    programs.dconf.enable = true;
+
     # Default browser
     xdg.mime.defaultApplications = {
         "text/html" = "firefox-devedition.desktop";
