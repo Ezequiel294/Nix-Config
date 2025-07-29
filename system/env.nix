@@ -8,7 +8,7 @@
         QT_QPA_PLATFORM="wayland";
         QT_QPA_PLATFORMTHEME="qt5ct";
         GDK_BACKEND="wayland";
-        GTK_THEME="Adwaita";
+        GTK_THEME="adw-gtk3-dark";
         BROWSER="firefox-developer-edition";
         EDITOR="nvim";
         VISUAL="code";
