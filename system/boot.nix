@@ -24,17 +24,15 @@ in
     };
 
     # Secure boot
-    {
-        imports = [ lanzaboote.nixosModules.lanzaboote ];
+    imports = [ lanzaboote.nixosModules.lanzaboote ];
 
-        environment.systemPackages = [
-            # For debugging and troubleshooting Secure Boot.
-            pkgs.sbctl
-        ];
+    environment.systemPackages = [
+        # For debugging and troubleshooting Secure Boot.
+        pkgs.sbctl
+    ];
 
-        boot.lanzaboote = {
-            enable = true;
-            pkiBundle = "/var/lib/sbctl";
-        };
-    }
+    boot.lanzaboote = {
+        enable = true;
+        pkiBundle = "/var/lib/sbctl";
+    };
 }
