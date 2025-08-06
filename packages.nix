@@ -52,6 +52,7 @@
       dropbox
       insync
       xfce.thunar
+      gvfs
 
       # ───── Utilities ─────
       ghostty

@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
+let
+    sources = import ./nix/sources.nix;
+    lanzaboote = import sources.lanzaboote;
+in
 
 {
     boot = {
@@ -18,4 +22,19 @@
             };
         };
     };
+
+    # Secure boot
+    {
+        imports = [ lanzaboote.nixosModules.lanzaboote ];
+
+        environment.systemPackages = [
+            # For debugging and troubleshooting Secure Boot.
+            pkgs.sbctl
+        ];
+
+        boot.lanzaboote = {
+            enable = true;
+            pkiBundle = "/var/lib/sbctl";
+        };
+    }
 }
