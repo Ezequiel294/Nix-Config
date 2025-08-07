@@ -14,7 +14,7 @@
 
   outputs = { self, nixpkgs, lanzaboote, ...}: {
     nixosConfigurations = {
-      yourHost = nixpkgs.lib.nixosSystem {
+      p14s = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
