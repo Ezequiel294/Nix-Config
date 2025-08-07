@@ -5,7 +5,7 @@
         plymouth.enable = false;
 
         loader = {
-            systemd-boot.enable = enable;
+            systemd-boot.enable = true;
             efi.efiSysMountPoint = "/boot";
             efi.canTouchEfiVariables = true;
             systemd-boot.xbootldrMountPoint = "/efi";
