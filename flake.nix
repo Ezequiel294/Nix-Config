@@ -21,6 +21,23 @@
           # This is not a complete NixOS configuration and you need to reference
           # your normal configuration here.
           ./configuration.nix
+          ./hardware-configuration.nix
+
+          ./system/filesystem.nix
+          ./system/boot.nix
+          ./system/security.nix
+          ./system/battery.nix
+          ./system/locale.nix
+          ./system/users.nix
+          ./system/env.nix
+          ./system/packages.nix
+
+          ./services/network.nix
+          ./services/bluetooth.nix
+          ./services/audio.nix
+          ./services/login.nix
+          ./services/window-manager.nix
+          ./services/virtualization.nix
 
           lanzaboote.nixosModules.lanzaboote
 
