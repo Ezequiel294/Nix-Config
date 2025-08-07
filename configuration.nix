@@ -8,14 +8,15 @@
     imports =
       [
         ./hardware-configuration.nix
-        ./packages.nix
 
+        ./system/filesystem.nix
         ./system/boot.nix
         ./system/security.nix
         ./system/battery.nix
         ./system/locale.nix
         ./system/users.nix
         ./system/env.nix
+        ./system/packages.nix
 
         ./services/network.nix
         ./services/bluetooth.nix
