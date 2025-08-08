@@ -6,7 +6,6 @@
 
 {
     imports = [
-        ./system/filesystem.nix
         ./system/boot.nix
         ./system/security.nix
         ./system/battery.nix
