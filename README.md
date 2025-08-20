@@ -6,12 +6,12 @@
 
 1. Clone dotfiles bare repo into home directory
 ```bash
-git clone --bare https://github.com/Ezequiel294/dotfiles .dotfiles" {username}
+git clone --bare https://github.com/Ezequiel294/dotfiles .dotfiles {username}
 ```
 
 2. Checkout the repo
 ```bash
-git --git-dir=/home/{username}/.dotfiles/ --work-tree=/home/{username} checkout --force" {username}
+git --git-dir=/home/{username}/.dotfiles/ --work-tree=/home/{username} checkout --force {username}
 ```
 
 3. Reboot the system
